@@ -1,0 +1,133 @@
+{
+	"info": {
+		"_postman_id": "fde953b7-a314-4b93-89d8-da2b5960426f",
+		"name": "CatalogSearch",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "searchProductBySku",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AllProducts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/AllProducts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"AllProducts"
+					]
+				},
+				"description": "GetAll"
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteProduct",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				},
+				"description": "To delete a product by sku"
+			},
+			"response": []
+		},
+		{
+			"name": "AddProduct",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "       {\r\n            \"product_id\": 10,\r\n            \"sku\": \"abcde123\",\r\n            \"name\": \"Asics gel Kayana 25\",\r\n            \"category\": \"Shoe\",\r\n            \"brand\": \"Asics\",\r\n            \"description\": \"Running shoe\",\r\n            \"seller_name\": \"Magic co. Ltd.\",\r\n            \"stock\": 12,\r\n            \"price\": 8999.0,\r\n            \"created_datetime\": \"2020-01-18T06:40:35.479+0000\",\r\n            \"modified_datetime\": \"2020-01-18T06:40:35.479+0000\",\r\n            \"spec\": [\r\n                {\r\n                    \"sprec_id\": 1,\r\n                    \"sku\": \"abcde123\",\r\n                    \"attribute\": \"color\",\r\n                    \"value\": \"white\"\r\n                },\r\n                {\r\n                    \"sprec_id\": 2,\r\n                    \"sku\": \"abcde123\",\r\n                    \"attribute\": \"size\",\r\n                    \"value\": \"29.5\"\r\n                }\r\n            ]\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/AddProduct",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"AddProduct"
+					]
+				},
+				"description": "Adding a new product"
+			},
+			"response": []
+		},
+		{
+			"name": "SearchProduct",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				},
+				"description": "Search Product by color, size, brand, price"
+			},
+			"response": []
+		},
+		{
+			"name": "SellerProductCount",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				},
+				"description": "Total products available from a seller"
+			},
+			"response": []
+		},
+		{
+			"name": "Order a product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/AllProducts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"AllProducts"
+					]
+				},
+				"description": "Order confirmation will deduct the count from product catalog"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
